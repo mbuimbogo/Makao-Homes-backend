@@ -7,16 +7,16 @@
 #   Character.create!(name: "Luke", movie: movies.first)
 
 puts "seeding data.."
-client = Client.create!(name: "Sophia Nganga",  password: "Kabda")
-first = Client.create!(name: "Verah Njenga",  password: "Vee")
-third = Client.create!(name: "Nana Owiti",   password: "Vin")
-forth = Client.create!(name: "Ian Macharia",  password: "Sartivah")
-fifth = Client.create!(name: "Mukangu Munini",   password: "Vaite")
-sixth = Client.create!(name: "Esther Muturi",   password: "Princess")
-seventh = Client.create!(name: "Reagan Kinoti", password: "Scotty")
-eigth = Client.create!(name: "Wanjiku Muinamia",   password: "Dee")
-ninth = Client.create!(name: "Wambui Ericah",  password: "Santos")
-second = Client.create!(name: "Meghan Njeri",   password: "Princeses")
+client = Client.create!(name: "Sophia Nganga", username: "Kabda", password: "Kabdakk")
+first = Client.create!(name: "Verah Njenga",  username: "Vee", password: "Veeeee")
+third = Client.create!(name: "Nana Owiti",   username: "Vin", password: "Vinnnnn")
+forth = Client.create!(name: "Ian Macharia",   username: "Sartivah",password: "Sartivah")
+fifth = Client.create!(name: "Mukangu Munini",  username: "Vaite",  password: "Vaiteee")
+sixth = Client.create!(name: "Esther Muturi",  username: "Princess",  password: "Princess")
+seventh = Client.create!(name: "Reagan Kinoti",  username: "Scotty", password: "Scottyy")
+eigth = Client.create!(name: "Wanjiku Muinamia",   username: "Dee", password: "Deeeee")
+ninth = Client.create!(name: "Wambui Ericah",  username: "Santos", password: "Santosss")
+second = Client.create!(name: "Meghan Njeri",  username: "Princ",  password: "Princeses")
 
 
 Property.create!(location:"Mombasa", 
