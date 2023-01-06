@@ -12,7 +12,7 @@ def create
 end
 
 def destroy
-    @comment.destroy
+    @comment= Comment.destroy!(comment_params)
     render json: comment, status: :destroy
 end
 
