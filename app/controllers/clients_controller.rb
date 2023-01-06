@@ -8,6 +8,6 @@ class ClientsController < ApplicationController
         client = User.find_by(id: params[:id])
         render json: client
     end
-
+    
    
 end

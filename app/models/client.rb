@@ -1,4 +1,4 @@
-class Client < ApplicationRecord
+class Client < User
     has_many :comments
     has_many :reviews
     validates :username, presence: true
