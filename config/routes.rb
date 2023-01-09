@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :clients
   resources :properties, only: [:index, :show, :create, :destroy]
+ 
   post "/login", to: "sessions#create"
   get "/me", to: "sessions#show"
   delete "/logout", to: "sessions#destroy"
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, only: [:create, :index]
+      resources :sellers, only: [:index, :show, :create]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
     end
