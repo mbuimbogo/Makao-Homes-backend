@@ -1,5 +1,5 @@
 class Seller < User
-    has_many :properties
+    has_many :properties, dependent: :destroy
     has_many :reviews
     has_many :comments 
     
