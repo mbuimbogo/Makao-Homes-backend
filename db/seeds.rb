@@ -7,20 +7,23 @@
 #   Character.create!(name: "Luke", movie: movies.first)
 
 puts "seeding data.."
-# client = Client.create!(name: "Sophia Nganga", username: "Kabda", password: "Kabdakk")
-# first = Client.create!(name: "Verah Njenga",  username: "Vee", password: "Veeeee")
-# third = Client.create!(name: "Nana Owiti",   username: "Vin", password: "Vinnnnn")
-# forth = Client.create!(name: "Ian Macharia",   username: "Sartivah",password: "Sartivah")
-# fifth = Client.create!(name: "Mukangu Munini",  username: "Vaite",  password: "Vaiteee")
-# sixth = Client.create!(name: "Esther Muturi",  username: "Princess",  password: "Princess")
-# seventh = Client.create!(name: "Reagan Kinoti",  username: "Scotty", password: "Scottyy")
-# eigth = Client.create!(name: "Wanjiku Muinamia",   username: "Dee", password: "Deeeee")
-# ninth = Client.create!(name: "Wambui Ericah",  username: "Santos", password: "Santosss")
-# second = Client.create!(name: "Meghan Njeri",  username: "Princ",  password: "Princeses")
+client = Client.create!(name: "Sophia Nganga", username: "Kabda", password: "Kabdakk")
+first = Client.create!(name: "Verah Njenga",  username: "Vee", password: "Veeeee")
+third = Client.create!(name: "Nana Owiti",   username: "Vin", password: "Vinnnnn")
+forth = Client.create!(name: "Ian Macharia",   username: "Sartivah",password: "Sartivah")
+fifth = Client.create!(name: "Mukangu Munini",  username: "Vaite",  password: "Vaiteee")
+sixth = Seller.create!(name: "Esther Muturi",  username: "Princess",  password: "Princess")
+seventh = Seller.create!(name: "Reagan Kinoti",  username: "Scotty", password: "Scottyy")
+eigth = Seller.create!(name: "Wanjiku Muinamia",   username: "Dee", password: "Deeeee")
+ninth =Seller.create!(name: "Wambui Ericah",  username: "Santos", password: "Santosss")
+tenth = Seller.create!(name: "Harrison Itotia", username: "Handii", password: "Handiii")
+second = Seller.create!(name: "Meghan Njeri",  username: "Princ",  password: "Princeses")
+
 
 
 Property.create!(location:"Mombasa", 
     name:"AX Capital Real Estate",
+    seller_id:sixth.id,
     price: 10000, 
     property_type:"Residential floor",
     image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1672734057/Makao%20homes/img_kbjqac.webp", 
@@ -28,13 +31,15 @@ Property.create!(location:"Mombasa",
     - Well laid out four-bedroom - Master ensuite Bathroom - Fully upgraded European preparation fitted kitchen - Beautifully crafted walk-in closet - Marble floating staircase - Fully upgraded walk-in closet - Total area 6,512.49 sq ft - Terrace 722,21 sq ft - About the Project: Welcome to the future of elegance, extravagance, and elite living. Facilities and Amenities: - Private Beach - 24 hours security system - Concierge - Chauffeur and butler services - Swimming pool - Wellness spa - Modern and full equipped fitness center - Exclusive dining services indoor and outdoor - Services Residents Club Unique Features - Direct beach access")
 Property.create!(location:"Nairobi", 
         name:"Espace Real Estate",
+        seller_id:seventh.id,
         price: 15000, 
         property_type:"Villas",
         image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1672736154/Makao%20homes/121c301dc38f407d9be4a72685ce2b77_o3tgii.webp", 
         description:"Espace Real Estate presents this contemporay residence in the heart of Nairobi.The property showcases minimalist-chic interiors blending modern design with impressively curated architectural elements offering private amenities amidst the city's Arabian Gulf and picturesque skyline. This 4 story property features an open air amenities with high ceilings, soaring walls and three stories of 
         light filled living environment. -Brand new beach front villa -Luxury 5 Bedrooms with ensuite bathrooms -4 Storey -Plot size: 29,000 sq. ft -Ultra-modern designed -High quality and luxury furnished -Maid's room, spacious storage, laundry room -Superb and convenient location -Breath-taking views of the city.")
-Property.create!(location:"Kikuyu ", 
+Property.create!(location:"Kikuyu", 
             name:"D and B properties",
+            seller_id:seventh.id,
             price:7000 , 
             property_type:"Villas",
             image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1672736742/Makao%20homes/5ecaf9f5bb9f4ce69ccba540f61e0179_cmcrez.webp", 
@@ -43,6 +48,7 @@ Property.create!(location:"Kikuyu ",
 
 Property.create!(location:"Nairobi ", 
     name:"EverNest Real Estate",
+    seller_id:eigth.id,
     price: 9000, 
     property_type:"Townhouse",
     image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1672741061/Makao%20homes/3b2bf22530d74a91b090c49838b81411_izl36b.webp", 
@@ -53,6 +59,7 @@ Property.create!(location:"Nairobi ",
 
 Property.create!(location:" Ruiru", 
     name:"Al Kayem CONSULTANT",
+    seller_id:seventh.id,
     price: 15000, 
     property_type:"Residential Building",
     image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1672742255/Makao%20homes/706dc8fc173e406abe1b4104c7a5bb25_a0ejf1.webp", 
@@ -63,6 +70,7 @@ Property.create!(location:" Ruiru",
 
 Property.create!(location:" Mombasa", 
     name:"Fam Properties",
+    seller_id:ninth.id,
     price:17000 , 
     property_type:"Villas",
     image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1672737207/Makao%20homes/1fdcf337d7ac47f78fb8669727336224_azdxl3.webp", 
@@ -73,6 +81,7 @@ Property.create!(location:" Mombasa",
 
 Property.create!(location:"Embakasi ", 
     name:"Magnate Real Estate",
+    seller_id:sixth.id,
     price: 13000, 
     property_type:"Residential Floor",
     image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1672734647/Makao%20homes/b82152c0564c4846b1d481e61d05af40_sflkqz.webp", 
@@ -80,6 +89,7 @@ Property.create!(location:"Embakasi ",
 
 Property.create!(location:"Embakasi ", 
     name:"Venice DMAC",
+    seller_id:ninth.id,
     price: 12000, 
     property_type:"Townhouse",
     image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1672741792/Makao%20homes/3fdb502d48854d1599951c82647121a8_zbey4r.webp", 
@@ -88,6 +98,7 @@ Property.create!(location:"Embakasi ",
 
 Property.create!(location:"Utawala ", 
     name:"Aeon Trisl Real Estate",
+    seller_id:ninth.id,
     price: 5000, 
     property_type:"Residential Building",
     image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1672742808/Makao%20homes/baae314363b24ebdaacfe82921f263ad_w5lkgx.webp", 
@@ -97,6 +108,7 @@ Property.create!(location:"Utawala ",
 
 Property.create!(location:"Kinoo ", 
     name:"ORLA",
+    seller_id:sixth.id,
     price: 8000, 
     property_type:"Apartment",
     image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1672735123/Makao%20homes/abd04296a353455d90f0203c7e4fff5d_u9li8r.webp", 
@@ -105,15 +117,71 @@ Property.create!(location:"Kinoo ",
     
 Property.create!(location:" Kinoo", 
     name: "Espace Real Estate",
+    seller_id:seventh.id,
     price: 14000, 
     property_type:"Apartment",
     image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1672732706/Makao%20homes/image_1_iwr0nf.webp", 
     description:"Espace Real Estate is delighted to bring to the market this truly exceptional four-bedroom apartment in the ever luxurious W Residences. Benefiting from some of the best views available within the development as well as a spacious and contemporary layout with four en-suite bedrooms, a study/ cinema room, two fully equipped kitchens, and sizeable storage space. Residents at W are welcomed to enjoy a 5 Star hotel lifestyle with exclusive access to the curved infinity pool, private beach, a fully equipped gym as well on-site restaurants and bars. This is truly one of a kind property, get in touch at your earliest convenience for more info and to book your viewing. -Exclusive -4 Bedrooms -Maid's room -Sea view -BUA: Approximately 7,375 sqft -High-end finishing -Furnished/Unfurnished possible -Wrap around the balcony -Luxury apartment -Five-star development -2 Parking spaces -Owner occupied")
 
-# Property.create!(location:" ", 
+# Property.create!(location:" Kisumu", 
+#     seller_id: second.id,
 #     name:"",
-#     price:, 
-#     property_type:"Residential Building",
+#     price:30000, 
+#     property_type:"Penthouse",
 #     image_url:"", 
 #     description:"")
+
+#     Property.create!(location:" Thika", 
+#         seller_id: second.id,
+#         name:"",
+#         price:25000, 
+#         property_type:"Penthouse",
+#         image_url:"", 
+#         description:"")
+
+    Property.create!(location:"Ngong", 
+    seller_id: tenth.id,
+    name:"Loi Properties",
+    price:13000, 
+    property_type:"Residential Building",
+    image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1673258921/Makao%20homes/9752d6ee660742f391cb610af3c26304_emeglw.webp", 
+    description:"FULL BUILDING FOR SALE IN DISCOVERY GARDENS BEST LOCATION. U TYPE BUILDING. FULLY RENOVATED BUILDING. FULLY FURNISHED BUILDING AND ALL APARTMENTS ALL BUILDING RENTED. PLOT AREA: 15160 SQFT BUILT UP AREA: 65000 SQFT SELL ABLE AREA: 52850 SQFT TOTAL UNITS: 66 STUDIOS: 24 ONE BED ROOM AND HALLS: 42 Price: AED 36,000,000/- (Negotiable) BUILDING IS RENTED AS VACATION HOMES, SHORT TERM RENTAL, HOLIDAY HOMES. BUILDING HAS GOODWILL THAT CLIENT ALREADY KNOWS THAT BUILDING IS FOR PURCHASE.
+     FULL BUILDING HAVE ONE TITLE DEED SO TRANSFER FEES, SERVICE CHARGES, TRUSTEE FEES AND NOC CHARGES ARE VERY LESS.")
+
+    Property.create!(location:"Kiambu", 
+    seller_id: seventh.id,
+    name:"Espace Real Estate",
+    price:17000, 
+    property_type:"Villas",
+    image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1673257438/Makao%20homes/0d8122d95d544942b15b09d0890303ab_jxtbig.webp", 
+    description:"Espace Real Estate presents this contemporay residence in the heart of Kiambu. Nestled in one of the Fronds on the iconic environs of Kiambu green city. The property is inspired to showcase minimalist-chic interiors blending modern design with impressively curated architectural elements offering private amenities. This 4 story property features an open air amenities with high ceilings, soaring walls and three stories of light
+     filled living environment. -Brand new beach front villa -Luxury 5 Bedrooms with ensuite bathrooms -4 Storey -Plot size: 29,000 sq. ft -Ultra-modern designed -High quality and luxury furnished -Maid's room, spacious storage, laundry room -Superb and convenient location -Breath-taking views of the beach -Ready Now Finance is available on this property through Espace Real Estate.")
+
+    Property.create!(location:" Kiserian", 
+        seller_id: second.id,
+        name:"Provident meda penthouse",
+        price:20000, 
+        property_type:"Penthouse",
+        image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1673253636/Makao%20homes/58da0abf11e649faa54f5c427e1e601c_avmb3i.webp
+        ", 
+        description:"AVA Mega Penthouse As the first building at the threshold of the Kiserian and it occupies an incomparable position right at the very bottom of Ngong hils. It is ideally placed to afford privileged access to both the calm of the waterfront and the dynamism of this Nairobi city. After the huge success of One Palm by Omniyat, the developer has brought one more stunning project to life
+        Specifications: • 33,406 sq. ft • 270 degree unobstructed views of Ngong hils • Private swimming pool and terrace for each unit • Fully equipped gym • Yoga studio • 24-hour concierge • Managed by Dorchester Collection • AVA boardroom, meeting rooms, and business centre • Library lounge ")
+
+        Property.create!(location:"Uthiru", 
+            seller_id: second.id,
+            name:"Capitale Real Estate",
+            price:15000, 
+            property_type:"Townhouse",
+            image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1673256543/Makao%20homes/f886a496c076441d9c6dc210d79aedaa_py2ucb.webp", 
+            description:"Capitale Real Estate is proud to offer this charming back-to-back 3-bed+maid townhouse. Located in the highly sought-after community within Uthiru. Property Detail: • BUA Size: 1,991SQFT • Plot Size: 2015 SQFT • 3 bedrooms + Maid • 2 Balconies • 2 Car Parking • Built-In Wardrobes • Under Developer warranty (structural) • Near pool &amp; park Community Highlights: • Landscaped Park &amp; garden • Childrens play area • Community
+             Community pool • Close to Schools, Nurseries and Mosques *UNBEATABLE Finance Option. Call for consultation* *Buy Ready Property with CRYPTO* Mudon Community offers you type a, corner, single row, semi detached, vacant, type b, end, upgraded Villas and Townhouses About Company Established in early 2011; Capitale is an award winning &amp; one of the fastest growing residential real estate brokerage firm in Kenya")
+
+        Property.create!(location:"Nanyuki", 
+            seller_id: second.id,
+            name:"Patriot Real Estate",
+            price:9000, 
+            property_type:"Residential plot",
+            image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1673258132/Makao%20homes/26236620c4c44a6c9b19a7ec6f20e1ef_aaxjgp.webp", 
+            description:"Patriot Real Estate is proud to present an exclusive residential Plot located at Nanyuki. Property Features:  Total Area: 1881 sq ft Amenities and Features: Fully gated ready community * Childrens nursery * Golf clubhouse * Public transport * Squash courts * Tennis courts * Shopping mall * Restaurants * Public park * Communal gardens * Childrens play area * Public parking * Security * Shops
+           We handle commercial, residential and investment property in and around Kenya, with an emphasis on the City Fringe and Tech City markets. We are doing what is best for our clients and making sure the vast range of advice we offer enhances their future prosperity. Our team is extremely and proudly approachable.")
     puts 'Done!'
