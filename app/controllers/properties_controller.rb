@@ -1,6 +1,6 @@
 class PropertiesController < ApplicationController
-    before_action :authorize
-    skip_before_action :authorize, only: [:index, :show]
+    # before_action :authorize
+    skip_before_action :authorized, only: [:index, :show]
     def index
         property = Property.all
         render json: property
@@ -32,9 +32,9 @@ class PropertiesController < ApplicationController
 
     private
     
-    def authorize
-      return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :client_id
-    end
+    # def authorize
+    #   return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :client_id
+    # end
 
     def property_params
     params.permit(:name, :location, :seller_id, :price, :image_url, :property_type, :description)
