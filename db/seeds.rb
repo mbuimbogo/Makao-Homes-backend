@@ -189,4 +189,8 @@ Property.create!(location:" Kinoo",
     Review.create!(body: "The staff was great. The receptionists were very helpful and answered all our questions. The room was clean and bright, and room service was always on time. Will be coming back!", user_id: 2) 
     Review.create!(body: "Amazing", user_id: 1)
     Review.create!(body: "Awful services", user_id: 4)
+
+    Comment.create!(body: " Such an amazing home", client_id: 1)
+    Comment.create!(body: " Beautiful", client_id:5)
+    Comment.create!(body: " I love it ", client_id:3)
     puts 'Done!'
