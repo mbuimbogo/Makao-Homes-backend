@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reviews, only: [:index, :create, :show, :destroy]
   resources :clients
   resources :properties, only: [:index, :show, :create, :destroy]
  
