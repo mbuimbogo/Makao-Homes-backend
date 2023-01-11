@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  resources :comments, only: [:index, :create, :show]
+  resources :reviews, only: [:index, :create, :show]
   resources :clients
   resources :properties, only: [:index, :show, :create, :destroy]
  
-  post "/login", to: "sessions#create"
-  get "/me", to: "sessions#show"
+  # post "/login", to: "sessions#create"
+  # get "/me", to: "sessions#show"
   delete "/logout", to: "sessions#destroy"
 
   namespace :api do

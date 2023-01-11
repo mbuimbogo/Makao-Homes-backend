@@ -123,6 +123,7 @@ Property.create!(location:" Kinoo",
     image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1672732706/Makao%20homes/image_1_iwr0nf.webp", 
     description:"Espace Real Estate is delighted to bring to the market this truly exceptional four-bedroom apartment in the ever luxurious W Residences. Benefiting from some of the best views available within the development as well as a spacious and contemporary layout with four en-suite bedrooms, a study/ cinema room, two fully equipped kitchens, and sizeable storage space. Residents at W are welcomed to enjoy a 5 Star hotel lifestyle with exclusive access to the curved infinity pool, private beach, a fully equipped gym as well on-site restaurants and bars. This is truly one of a kind property, get in touch at your earliest convenience for more info and to book your viewing. -Exclusive -4 Bedrooms -Maid's room -Sea view -BUA: Approximately 7,375 sqft -High-end finishing -Furnished/Unfurnished possible -Wrap around the balcony -Luxury apartment -Five-star development -2 Parking spaces -Owner occupied")
 
+
 # Property.create!(location:" Kisumu", 
 #     seller_id: second.id,
 #     name:"",
@@ -183,5 +184,13 @@ Property.create!(location:" Kinoo",
             property_type:"Residential plot",
             image_url:"https://res.cloudinary.com/dtovpreto/image/upload/v1673258132/Makao%20homes/26236620c4c44a6c9b19a7ec6f20e1ef_aaxjgp.webp", 
             description:"Patriot Real Estate is proud to present an exclusive residential Plot located at Nanyuki. Property Features:  Total Area: 1881 sq ft Amenities and Features: Fully gated ready community * Childrens nursery * Golf clubhouse * Public transport * Squash courts * Tennis courts * Shopping mall * Restaurants * Public park * Communal gardens * Childrens play area * Public parking * Security * Shops
-           We handle commercial, residential and investment property in and around Kenya, with an emphasis on the City Fringe and Tech City markets. We are doing what is best for our clients and making sure the vast range of advice we offer enhances their future prosperity. Our team is extremely and proudly approachable.")
+        We handle commercial, residential and investment property in and around Kenya, with an emphasis on the City Fringe and Tech City markets. We are doing what is best for our clients and making sure the vast range of advice we offer enhances their future prosperity. Our team is extremely and proudly approachable.")
+
+    Review.create!(body: "The staff was great. The receptionists were very helpful and answered all our questions. The room was clean and bright, and room service was always on time. Will be coming back!", user_id: 2) 
+    Review.create!(body: "Amazing", user_id: 1)
+    Review.create!(body: "Awful services", user_id: 4)
+
+    Comment.create!(body: " Such an amazing home", client_id: 1)
+    Comment.create!(body: " Beautiful", client_id:5)
+    Comment.create!(body: " I love it ", client_id:3)
     puts 'Done!'
