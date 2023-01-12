@@ -30,5 +30,5 @@ group :development do
   # gem "spring"
 end
 
-
+gem 'rest-client', '~> 2.0'
 gem "jwt", "~> 2.6"
