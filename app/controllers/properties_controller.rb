@@ -1,5 +1,6 @@
 class PropertiesController < ApplicationController
     # before_action :authorize
+    wrap_parameters format: []
     skip_before_action :authorized, only: [:index, :show]
     def index
         property = Property.all
