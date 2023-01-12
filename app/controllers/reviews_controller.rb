@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+    wrap_parameters format: []
     def index
         @reviews = Review.all
         render json: @reviews
