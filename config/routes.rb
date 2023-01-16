@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   resources :mpesas
-  post "/stkpush", to: "mpesas#stkpush"
-  post "/polling_payment", to: "mpesas#polling_payment"
+  # post "/stkpush", to: "mpesas#stkpush"
+  # post "/polling_payment", to: "mpesas#polling_payment"
+
+  post 'stkpush', to: 'mpesas#stkpush'
+    post 'stkquery', to: 'mpesas#stkquery'
   
   resources :comments, only: [:index, :create, :show]
   resources :reviews, only: [:index, :create, :show]
